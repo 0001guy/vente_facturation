@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import category,produit,Groupe,Personnel,Client,Commande,Mesure,Paiement,MesureProduit,ProduitCommande,stock
+from .models import category,produit,Groupe,Personnel,Client,Commande,Mesure,Paiement,MesureProduit,ProduitCommande,Stock
 
 admin.site.register(category)
 admin.site.register(produit)
@@ -11,6 +11,6 @@ admin.site.register(Mesure)
 admin.site.register(Paiement)
 admin.site.register(MesureProduit)
 admin.site.register(ProduitCommande)
-admin.site.register(stock)
+admin.site.register(Stock)
 
 # Register your models here.

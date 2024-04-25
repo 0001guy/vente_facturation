@@ -88,11 +88,11 @@ class ProduitCommande(models.Model):
 
     def __str__(self):
         return f"ProduitCommande {self.id}"
-class stock(models.Model):
+class Stock(models.Model):
     id = models.AutoField(primary_key=True)
-    produit = models.ForeignKey(produit,on_delete=models.CASCADE)
+    produit = models.ForeignKey(produit, on_delete=models.CASCADE)
     quantite_initiale = models.FloatField(editable=False, null=True)
     quantite_actuelle = models.FloatField(editable=False, null=True)
-    created_at = models.DateTimeField(Auto_now_add=True)
-    delai_expiration = models.positiveIntegerfield()
+    created_at = models.DateTimeField(editable=True)
+    delai_expiration = models.PositiveIntegerField()
     prix = models.FloatField()
